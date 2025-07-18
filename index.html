@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Minha Casa Minha Vida</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <h1>Conquiste seu Imóvel!</h1>
   <p>Aproveite condições especiais do Minha Casa Minha Vida.</p>
 
   <input type="text" id="nome" placeholder="Seu nome" />
-  <br>
+  <br />
   <input type="text" id="renda" placeholder="Sua renda" />
-  <br>
+  <br />
   <button onclick="enviarWhatsApp()">Fale conosco pelo WhatsApp</button>
 
   <script>
     function enviarWhatsApp() {
-      const nome = document.getElementById("nome").value;
-[14:29, 18/07/2025] ChatGPT: const renda = document.getElementById("renda").value;
+      const nome = document.getElementById("nome").value.trim();
+      const renda = document.getElementById("renda").value.trim();
       const numero = "5511953282008";
+
+      if (!nome || !renda) {
+        alert("Por favor, preencha seu nome e sua renda.");
+        return;
+      }
 
       const texto = Olá, me chamo nome e minha renda é R renda. Gostaria de saber mais sobre o programa.;
       const url = https://wa.me/{numero}?text=${encodeURIComponent(texto)};
 
-      window.open(url, '_blank');
+      window.open(url, "_blank");
     }
-  </script>
-
 </body>
 </html>
-
-
