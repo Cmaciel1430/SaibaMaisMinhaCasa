@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Casa Minha Vida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Conquiste seu Imóvel!</h1>
+  <p>Aproveite condições especiais do Minha Casa Minha Vida.</p>
+
+  <input type="text" id="nome" placeholder="Seu nome" />
+  <br>
+  <input type="text" id="renda" placeholder="Sua renda" />
+  <br>
+  <button onclick="enviarWhatsApp()">Fale conosco pelo WhatsApp</button>
+
+  <script>
+    function enviarWhatsApp() {
+      const nome = document.getElementById("nome").value;
+      const renda = document.getElementById("renda").value;
+      const numero = "5511953282008"; // Seu número com DDI + DDD
+
+      const texto = `Olá, me chamo nome e minha renda é R renda. Gostaria de saber mais sobre o programa.`;
+      const url = `https://wa.me/{numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
