@@ -35,21 +35,21 @@
         </div>
 
         <!-- Formulário de captura de dados -->
-        <form class="space-y-4">
+        <form id="contactForm" class="space-y-4">
             <div>
                 <label for="nome" class="block text-gray-700 text-sm font-semibold mb-1">Nome Completo</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
             </div>
             <div>
                 <label for="telefone" class="block text-gray-700 text-sm font-semibold mb-1">Telefone (WhatsApp)</label>
                 <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
             </div>
             <div>
                 <label for="renda" class="block text-gray-700 text-sm font-semibold mb-1">Renda Familiar Mensal</label>
                 <input type="number" id="renda" name="renda" placeholder="R$ 0,00"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
             </div>
             <!-- Botão de envio dos dados, com cor verde e responsivo -->
             <button type="submit"
@@ -69,5 +69,42 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // Get the form element by its ID
+        const form = document.getElementById('contactForm');
+
+        // Add an event listener for the form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior (page reload)
+            event.preventDefault();
+
+            // Get the values from the input fields
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const renda = document.getElementById('renda').value;
+
+            // Define your WhatsApp number (with country code and DDD)
+            const whatsappNumber = '5511953282008'; // Replace with your actual WhatsApp number
+
+            // Construct the message for WhatsApp
+            const message = `Olá! Tenho interesse no programa Minha Casa Minha Vida e preenchi o formulário.
+Nome: ${nome}
+Telefone: ${telefone}
+Renda Mensal: R$ ${renda}`;
+
+            // Encode the message for the URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Create the WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Open the WhatsApp URL in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Optionally, clear the form fields after submission
+            form.reset();
+        });
+    </script>
 </body>
 </html>
