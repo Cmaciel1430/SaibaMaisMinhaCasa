@@ -1,106 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título otimizado para SEO -->
-    <title>Minha Casa Minha Vida: Apartamentos com Subsídio e FGTS | Conquiste Seu Lar</title>
-    <!-- Meta Description: Descrição que aparece nos resultados de busca -->
-    <meta name="description" content="Realize o sonho da casa própria com o programa Minha Casa Minha Vida. Apartamentos com subsídio, juros baixos e uso do FGTS em todas as regiões. Fale conosco!">
-    <!-- Meta Keywords: Palavras-chave relevantes para a busca (opcional, mas bom ter) -->
-    <meta name="keywords" content="Minha Casa Minha Vida, apartamento, casa própria, subsídio, FGTS, financiamento, juros baixos, imóveis, comprar apartamento, primeiro imóvel, programa habitacional">
-    <!-- Carrega o Tailwind CSS para estilização -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carrega a fonte Inter do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Carrega o Font Awesome para o ícone do WhatsApp -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Sua Página de Captação</title>
+    
+    <meta name="google-site-verification" content="25MWvM9jdoocsN5RtjdGuXmh7ixepH5xND83KAMG98w" />
+    
     <style>
-        /* Define a fonte Inter para todo o corpo da página */
+        /* Estilos CSS do seu formulário ou página, se houver */
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
         }
     </style>
 </head>
-<body class="bg-green-600 min-h-screen flex items-center justify-center p-4">
-    <!-- Container principal do formulário, centralizado e com sombra -->
-    <div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full mx-auto">
-        <div class="text-center mb-6">
-            <!-- Logo do Minha Casa Minha Vida (placeholder) -->
-            <!-- Substitua esta URL pela imagem real do logo, se tiver uma -->
-            <img src="https://placehold.co/200x100/007bff/ffffff?text=Minha+Casa+Minha+Vida+Logo" alt="Logo Minha Casa Minha Vida - Oportunidade de Imóvel" class="mx-auto mb-4 rounded-md">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Realize o Sonho da Casa Própria com Minha Casa Minha Vida!</h1>
-            <p class="text-gray-600">Preencha seus dados para descobrir como o programa **Minha Casa Minha Vida** pode te ajudar a conquistar seu **apartamento** com **subsídio do governo**, **juros baixos** e utilizando seu **FGTS**.</p>
-            <p class="text-gray-600 mt-2">Temos **projetos em todas as regiões** esperando por você. Não perca essa chance!</p>
-        </div>
+<body>
+    <h1>Página de Captação - Minha Casa Minha Vida</h1>
+    <p>Preencha o formulário abaixo para receber mais informações:</p>
 
-        <!-- Formulário de captura de dados -->
-        <form id="contactForm" class="space-y-4">
-            <div>
-                <label for="nome" class="block text-gray-700 text-sm font-semibold mb-1">Nome Completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-            <!-- Campo de telefone do cliente removido conforme solicitado -->
-            <div>
-                <label for="renda" class="block text-gray-700 text-sm font-semibold mb-1">Renda Familiar Mensal</label>
-                <input type="number" id="renda" name="renda" placeholder="R$ 0,00"
-                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
-            </div>
-            <!-- Botão de envio dos dados, com cor verde e responsivo -->
-            <button type="submit"
-                    class="w-full bg-green-500 text-white font-bold py-3 px-4 rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
-                Enviar Meus Dados e Saber Mais
-            </button>
-        </form>
+    <form id="contactForm">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <!-- Seção para contato direto via WhatsApp -->
-        <div class="mt-6 text-center">
-            <p class="text-gray-600 mb-3">Ou fale conosco diretamente pelo WhatsApp para simular seu financiamento:</p>
-            <!-- Botão do WhatsApp, com cor amarela e responsivo -->
-            <!-- SEU NÚMERO ATUALIZADO: 5511953282008 -->
-            <a href="https://wa.me/5511953282008?text=Olá!%20Tenho%20interesse%20no%20programa%20Minha%20Casa%20Minha%20Vida%20e%20gostaria%20de%20saber%20mais." target="_blank"
-               class="w-full inline-block bg-yellow-500 text-gray-800 font-bold py-3 px-4 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
-                <i class="fab fa-whatsapp mr-2"></i> Falar no WhatsApp Agora!
-            </a>
-        </div>
-    </div>
+        <label for="renda">Renda Mensal (aprox.):</label>
+        <input type="number" id="renda" name="renda" min="0" step="any" required>
+
+        <button type="submit">Enviar via WhatsApp</button>
+    </form>
 
     <script>
-        // Get the form element by its ID
+        // O script JavaScript para o WhatsApp
         const form = document.getElementById('contactForm');
 
-        // Add an event listener for the form submission
         form.addEventListener('submit', function(event) {
-            // Prevent the default form submission behavior (page reload)
-            event.preventDefault();
+            event.preventDefault(); // Impede o envio padrão do formulário
 
-            // Get the values from the input fields
             const nome = document.getElementById('nome').value;
-            const renda = document.getElementById('renda').value; // Telefone do cliente foi removido
+            const renda = document.getElementById('renda').value;
 
-            // Define your WhatsApp number (with country code and DDD)
             const whatsappNumber = '5511953282008'; // Seu número de WhatsApp
-
+            
             // Construct the message for WhatsApp
             // A mensagem agora inclui apenas nome e renda
-            const message = `Olá! Tenho interesse no programa Minha Casa Minha Vida e preenchi o formulário.
-Nome: ${nome}
-Renda Mensal: R$ ${renda}`;
-
+            const message = `Olá! Tenho interesse no programa Minha Casa Minha Vida e preenchi o formulário.\nNome: ${nome}\nRenda Mensal: R$ ${renda}`;
+            
             // Encode the message for the URL
             const encodedMessage = encodeURIComponent(message);
-
+            
             // Create the WhatsApp URL
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
+            
             // Open the WhatsApp URL in a new tab
             window.open(whatsappUrl, '_blank');
-
+            
             // Optionally, clear the form fields after submission
             form.reset();
         });
     </script>
 </body>
 </html>
-
