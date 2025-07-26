@@ -1,94 +1,274 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Página de Captação</title>
-    
-    <meta name="google-site-verification" content="25MWvM9jdoocsN5RtjdGuXmh7ixepH5xND83KAMG98w" />
-    
+    <title>Encontre Seu Imóvel | [Seu Nome/Imobiliária]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos CSS do seu formulário ou página, se houver */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
         }
-        form {
-            max-width: 500px;
+
+        .container {
+            max-width: 960px;
             margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
+            padding: 0 15px;
         }
-        label {
+
+        /* Seção de Cabeçalho (Hero) */
+        .hero-section {
+            background-image: url('URL_DA_SUA_IMAGEM_AQUI.jpg'); /* Substitua por sua imagem */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Overlay para escurecer a imagem e melhorar a leitura do texto */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        /* O conteúdo do cabeçalho precisa estar acima do overlay */
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Estilos para os textos dentro do cabeçalho */
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilos dos botões de Chamada para Ação */
+        .btn-cta,
+        .btn-submit {
+            display: inline-block;
+            background-color: #007bff; /* Cor do botão */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover,
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        /* Seção de Benefícios */
+        .benefits-section,
+        .form-section,
+        .footer-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .benefits-section h2,
+        .form-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .benefits-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .benefit-item {
+            flex-basis: 30%;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Seção de Formulário */
+        .form-section {
+            background-color: #f4f4f4;
+        }
+
+        .capture-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-weight: bold;
+            font-weight: 600;
+            color: #555;
         }
-        input[type="text"],
-        input[type="number"] {
-            width: calc(100% - 22px);
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 15px;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            box-sizing: border-box;
+            font-size: 1em;
         }
-        button:hover {
-            background-color: #218838;
+        
+        .btn-submit {
+            width: 100%;
+            font-size: 1.2em;
+            padding: 15px;
+        }
+
+        /* Rodapé */
+        .footer-section {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Página de Captação - Minha Casa Minha Vida</h1>
-    <p>Preencha o formulário abaixo para receber mais informações:</p>
+    <header class="hero-section">
+        <div class="container">
+            <h1>Encontre seu imóvel em São Paulo.</h1>
+            <p>Receba ofertas personalizadas de casas e apartamentos.</p>
+            <a href="#formulario" class="btn-cta">Quero encontrar meu imóvel!</a>
+        </div>
+    </header>
 
-    <form id="contactForm">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Por que escolher nossos imóveis?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Ofertas Personalizadas</h3>
+                    <p>Opções que combinam com seu perfil e orçamento.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Acesso a Lançamentos</h3>
+                    <p>Descubra imóveis antes de chegarem ao mercado.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Consultoria Especializada</h3>
+                    <p>Conte com o apoio de especialistas para a melhor escolha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <label for="renda">Renda Mensal (aprox.):</label>
-        <input type="number" id="renda" name="renda" min="0" step="any" required>
+    <section class="form-section" id="formulario">
+        <div class="container">
+            <h2>Cadastre-se e receba as melhores ofertas.</h2>
+            <div class="capture-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone/WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipoImovel">Qual tipo de imóvel você procura?</label>
+                    <select id="tipoImovel" name="tipoImovel">
+                        <option value="">Selecione</option>
+                        <option value="apartamento">Apartamento</option>
+                        <option value="casa">Casa</option>
+                        <option value="terreno">Terreno</option>
+                        <option value="comercial">Comercial</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-submit" onclick="enviarDados()">Receber Ofertas Agora!</button>
+            </div>
+        </div>
+    </section>
 
-        <button type="submit">Enviar via WhatsApp</button>
-    </form>
+    <footer class="footer-section">
+        <div class="container">
+            <p>&copy; 2025 [Seu Nome/Nome da Imobiliária].</p>
+            <p>
+                <a href="#">Política de Privacidade</a>
+            </p>
+        </div>
+    </footer>
 
     <script>
-        // O script JavaScript para o WhatsApp
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-
+        function enviarDados() {
+            // Pega os dados do formulário
             const nome = document.getElementById('nome').value;
-            const renda = document.getElementById('renda').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const tipoImovel = document.getElementById('tipoImovel').value;
 
-            const whatsappNumber = '5511953282008'; // Seu número de WhatsApp
+            // Formata a mensagem para o WhatsApp e E-mail
+            const mensagem = `Olá, meu nome é ${nome} e tenho interesse em um imóvel.
+E-mail: ${email}
+Telefone: ${telefone}
+Tipo de imóvel que procuro: ${tipoImovel}`;
+
+            // --- Configurações que você deve alterar ---
+            const numeroWhatsapp = '5511953282008'; // Seu número com DDI e DDD
+            const seuEmail = 'carlos.maciel@creci.gov.br; // Seu e-mail
+
+            // Abre o WhatsApp (irá abrir uma nova aba)
+            const linkWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsapp}&text=${encodeURIComponent(mensagem)}`;
+            window.open(linkWhatsapp, '_blank');
             
-            // Construct the message for WhatsApp
-            // A mensagem agora inclui apenas nome e renda
-            const message = `Olá! Tenho interesse no programa Minha Casa Minha Vida e preenchi o formulário.\nNome: ${nome}\nRenda Mensal: R$ ${renda}`;
-            
-            // Encode the message for the URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Create the WhatsApp URL
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
-            // Open the WhatsApp URL in a new tab
-            window.open(whatsappUrl, '_blank');
-            
-            // Optionally, clear the form fields after submission
-            form.reset();
-        });
+            // Abre o E-mail (também irá abrir uma nova aba)
+            const linkEmail = `mailto:${seuEmail}?subject=Novo Contato - Interesse em Imóvel&body=${encodeURIComponent(mensagem)}`;
+            window.open(linkEmail, '_blank');
+        }
     </script>
 </body>
 </html>
