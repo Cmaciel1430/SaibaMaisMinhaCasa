@@ -1,42 +1,198 @@
-css
+/* Conteúdo do seu arquivo style.css no GitHub */
 body {
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
- color: #333;
-  text-align: center;
-  padding: 30px;
+  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif; /* Usando Poppins aqui, já que está no HTML */
+ color: #333;
+  text-align: center;
+  padding: 30px;
 }
 
 h1 {
-  color: #004aad;
-  margin-bottom: 10px;
+  color: #004aad;
+  margin-bottom: 10px;
 }
 
+/* ... todo o restante do seu código CSS ... */
+
 p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 80%;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #004aad;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #003280;
+  background-color: #003280;
+}
+
+/* Continuar com o resto do seu CSS para .container, .hero-section, etc. */
+/* Certifique-se de que *todos* os estilos que você quer para a página estejam aqui. */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero-section {
+    background-image: url('URL_DA_SUA_IMAGEM_AQUI.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn-cta,
+.btn-submit {
+    display: inline-block;
+    background-color: #007bff; 
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta:hover,
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.benefits-section,
+.form-section,
+.footer-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefits-section h2,
+.form-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.benefit-item {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    background-color: #f4f4f4;
+}
+
+.capture-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+    
+.btn-submit {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.footer-section {
+    background-color: #343a40;
+    color: #ccc;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+    text-decoration: underline;
 }
